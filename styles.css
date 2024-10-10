@@ -7,6 +7,7 @@
 
 body {
     line-height: 1.6;
+    background-color: #f0f4f8;
 }
 
 .container {
@@ -16,7 +17,7 @@ body {
 }
 
 header {
-    background: #333;
+    background-color: #003366;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -55,7 +56,7 @@ nav ul li a {
 }
 
 .cta-button {
-    background: #ff9900;
+    background: #ff3333;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -74,10 +75,18 @@ nav ul li a {
 
 .service {
     margin-bottom: 30px;
+    display: inline-block;
+    width: 30%;
+    padding: 10px;
+}
+
+.service img {
+    width: 100%;
+    border-radius: 8px;
 }
 
 .about-us {
-    background: #f4f4f4;
+    background-color: #e0e0e0;
     padding: 50px 0;
     text-align: center;
 }
@@ -106,7 +115,7 @@ nav ul li a {
 }
 
 .contact form button {
-    background: #333;
+    background-color: #003366;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -115,7 +124,7 @@ nav ul li a {
 }
 
 footer {
-    background: #333;
+    background-color: #003366;
     color: #fff;
     text-align: center;
     padding: 10px 0;
