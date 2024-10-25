@@ -5,29 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ADC | Sécurité & Solutions Connectées</title>
-    <style>
-        /* Styles principaux */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { line-height: 1.6; background-color: #f0f4f8; }
-        .container { width: 80%; margin: auto; overflow: hidden; }
-
-        /* Styles des sections */
-        header, footer { background-color: #003366; color: #fff; padding: 20px 0; text-align: center; }
-        .hero {  
-            height: 400px; 
-            color: #fff; 
-            text-align: center; 
-            padding-top: 150px; 
-        }
-        .cta-button {
-            background: #ff3333; 
-            color: #fff; 
-            padding: 10px 20px; 
-            text-decoration: none; 
-            border-radius: 5px; 
-        }
-        .services, .about-us, .contact, .download-section { padding: 50px 0; text-align: center; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -83,11 +61,18 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contactez-nous</h2>
-            <form>
-                <input type="text" placeholder="Nom" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
+            <h2>Contactez-Nous</h2>
+            <p>Email: <a href="mailto:adc.contact@adc.com">adc.contact@adc.com</a></p>
+            <form action="#" method="POST">
+                <label for="name">Votre Nom</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Votre Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Votre Message</label>
+                <textarea id="message" name="message" required></textarea>
+
                 <button type="submit">Envoyer</button>
             </form>
         </div>
@@ -95,18 +80,9 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 ADC. Tous droits réservés.</p>
+            <p>&copy; 2024 ADC. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <script>
-        // Fonction de téléchargement du fichier ADC.txt
-        function downloadFile() {
-            const link = document.createElement("a");
-            link.href = "data:text/plain;charset=utf-8," + encodeURIComponent("Contenu de votre fichier ADC.txt");
-            link.download = "ADC.txt";
-            link.click();
-        }
-    </script>
 </body>
 </html>
