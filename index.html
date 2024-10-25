@@ -6,6 +6,212 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ADC | Sécurité & Solutions Connectées</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1500x400') no-repeat center center/cover;
+            height: 400px;
+            color: #fff;
+            text-align: center;
+            padding-top: 150px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background: #ff3333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .services {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .services h2 {
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .service {
+            margin-bottom: 30px;
+            display: inline-block;
+            width: 30%;
+            padding: 10px;
+        }
+
+        .service img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .about-us {
+            background-color: #e0e0e0;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .about-us p {
+            width: 60%;
+            margin: auto;
+        }
+
+        .contact {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact form button {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .download-section {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #f7f9fc;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ff3333;
+            color: #fff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #cc2900;
+            transform: scale(1.1);
+        }
+
+        .blog-section {
+            padding: 50px 0;
+            background-color: #e0f7fa;
+        }
+
+        .blog-section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #posts .post {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-section {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #f0f4f8;
+        }
+
+        #login-form {
+            display: inline-block;
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        #login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,6 +223,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">À propos</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#blog">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -51,6 +258,13 @@
         </div>
     </section>
 
+    <section id="download" class="download-section">
+        <div class="container">
+            <h2>Télécharger ADC.txt</h2>
+            <a href="ADC.txt" download class="download-button">Télécharger Maintenant</a>
+        </div>
+    </section>
+
     <section id="about" class="about-us">
         <div class="container">
             <h2>À propos de ADC</h2>
@@ -59,20 +273,37 @@
         </div>
     </section>
 
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2>Blog</h2>
+            <div id="posts">
+                <!-- Les articles de blog seront ajoutés ici via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="admin-login" class="login-section">
+        <div class="container">
+            <h2>Connexion Administrateur</h2>
+            <form id="login-form">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="button" onclick="login()">Se connecter</button>
+            </form>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contactez-Nous</h2>
-            <p>Email: <a href="mailto:adc.contact@adc.com">adc.contact@adc.com</a></p>
-            <form action="#" method="POST">
-                <label for="name">Votre Nom</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Votre Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Votre Message</label>
-                <textarea id="message" name="message" required></textarea>
-
+            <h2>Contactez-nous</h2>
+            <form>
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
                 <button type="submit">Envoyer</button>
             </form>
         </div>
@@ -80,9 +311,63 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 ADC. Tous droits réservés.</p>
+            <p>&copy; 2023 ADC. Tous droits réservés.</p>
         </div>
     </footer>
 
+    <script>
+        const adminUsername = "admin";
+        const adminPassword = "password123";
+
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === adminUsername && password === adminPassword) {
+                alert("Connexion réussie!");
+                document.getElementById("login-form").style.display = "none";
+                displayPostForm();
+            } else {
+                alert("Nom d'utilisateur ou mot de passe incorrect.");
+            }
+        }
+
+        function displayPostForm() {
+            const postForm = `
+                <section class="create-post">
+                    <div class="container">
+                        <h2>Créer un nouvel article</h2>
+                        <form id="post-form">
+                            <label for="title">Titre de l'article</label>
+                            <input type="text" id="title" required>
+
+                            <label for="content">Contenu de l'article</label>
+                            <textarea id="content" required></textarea>
+
+                            <button type="button" onclick="createPost()">Publier</button>
+                        </form>
+                    </div>
+                </section>`;
+
+            document.body.insertAdjacentHTML("beforeend", postForm);
+        }
+
+        function createPost() {
+            const title = document.getElementById("title").value;
+            const content = document.getElementById("content").value;
+
+            const postHTML = `
+                <div class="post">
+                    <h3>${title}</h3>
+                    <p>${content}</p>
+                </div>`;
+
+            document.getElementById("posts").insertAdjacentHTML("beforeend", postHTML);
+
+            document.getElementById("title").value = "";
+            document.getElementById("content").value = "";
+            alert("Article publié avec succès!");
+        }
+    </script>
 </body>
 </html>
