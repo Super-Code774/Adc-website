@@ -43,7 +43,7 @@ nav ul li a {
 }
 
 .hero {
-    background: url('https://via.placeholder.com/1500x400') no-repeat center center/cover;
+    background: #ff3333;
     height: 400px;
     color: #fff;
     text-align: center;
